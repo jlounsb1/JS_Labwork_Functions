@@ -1,43 +1,3 @@
-/**
- * Any of the examples below will accomplish the
- * same task: reversing a string.
- * 
- * Which of these examples is best? Why?
- * Note that there is no "correct" answer.
- */
-// function reverseString(str) {
-//     const strArray = str.split("");
-//     const revArray = strArray.reverse();
-//     const revString = revArray.join("");
-//     return revString;
-//   }
-  
-//   function reverseString2(str) {
-//     return str.split("").reverse().join("");
-//   }
-  
-//   function reverseString3(str) {
-//     let revString = "";
-//     for (let i = str.length - 1; i >= 0; i--) {
-//       revString += str[i];
-//     }
-//     return revString;
-//   }
-  
-//   function reverseString4(str) {
-//     if (str === "") return "";
-//     else return reverseString4(str.substr(1)) + str.charAt(0);
-//   }
-  
-//   function reverseString5(str) {
-//     return (str === "") ? "" : reverseString5(str.substr(1)) + str.charAt(0);
-//   }
-  
-//   console.log(reverseString("!dlroW olleH"))
-//   console.log(reverseString2("!dlroW olleH"))
-//   console.log(reverseString3("!dlroW olleH"))
-//   console.log(reverseString4("!dlroW olleH"))
-//   console.log(reverseString5("!dlroW olleH"))
 
 //take an array of numbers and return the sum
 
@@ -66,16 +26,6 @@ average();
 let itemArray= ["Apple", "Peach", "Strawberry", "Banana", "Plum"]
 //take an array of strings and return the longest item
 
-// function longestItem (str) {
-//     let longest = "";
-//     for(key in str) {
-//         if(str[key] ===undefined) break;
-//         else if(str[key].length>str[key-1].length){
-//         longest=str[key];
-//         } ;
-// } console.log(longest);
-
-// }
 
 function longestItem(str){
     let arrayExample =[];
@@ -157,5 +107,16 @@ console.log(arrayObjects);
 
 //filter the array to remove entries with an age greater than 50
 
-let young = arrayObjects.filter(element=>element.Age <50);
-console.log(young);
+let youngArray = arrayObjects.filter(element=>element.Age <50);
+console.log(youngArray);
+
+//change the section for occupation to read job using map
+function keySwitch() {
+jobArray = youngArray.map(function (obj) {
+    obj['Job'] =obj['Occupation'];
+    delete obj['Occupation'];
+    return obj;
+});
+console.log(jobArray);
+}
+keySwitch();
