@@ -111,10 +111,12 @@ let youngArray = arrayObjects.filter(element=>element.Age <50);
 console.log(youngArray);
 
 //change the section for occupation to read job using map
+//Also adding the age by 1
 function keySwitch() {
 jobArray = youngArray.map(function (obj) {
     obj['Job'] =obj['Occupation'];
     delete obj['Occupation'];
+    obj.Age =Number(obj.Age) +1;
     return obj;
 });
 console.log(jobArray);
