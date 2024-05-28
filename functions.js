@@ -114,4 +114,39 @@ function recursion (startNum) {
 recursion(n);
 
 
+//The following is the code copied from the previous lab to get the array needed for part 2 of this lab
+const data ="ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 
+let array = data.split(`\n`)
+let newArray1 = array[0].split(',');
+let newArray2 = array[1].split(',');
+let newArray3 = array[2].split(',');
+let newArray4 = array[3].split(',');
+let newArray5 = array[4].split(',');
+combinedArray = [newArray1, newArray2, newArray3, newArray4, newArray5];
+obj1 = {};
+for(const key in newArray1) {
+    obj1[newArray1[key]] = `${newArray2[key]}`;
+}
+obj2 = {};
+for(const key in newArray1) {
+    obj2[newArray1[key]] = `${newArray3[key]}`;
+}
+obj3 = {};
+for(const key in newArray1) {
+    obj3[newArray1[key]] = `${newArray4[key]}`;
+}
+obj4 = {};
+for(const key in newArray1) {
+    obj4[newArray1[key]] = `${newArray5[key]}`;
+}
+arrayObjects =[obj1,obj2,obj3,obj4];
+arrayObjects.pop();
+newObj4 = {
+    ID: '7', 
+    Name: 'Bilbo', 
+    Occupation: 'None', 
+    Age: '111'};
+
+    arrayObjects.push(newObj4);
+console.log(arrayObjects);
