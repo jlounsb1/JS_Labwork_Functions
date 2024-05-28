@@ -150,3 +150,12 @@ newObj4 = {
 
     arrayObjects.push(newObj4);
 console.log(arrayObjects);
+
+//sort by age
+arrayObjects.sort((a, b) => a.Age -b.Age);
+console.log(arrayObjects);
+
+//filter the array to remove entries with an age greater than 50
+
+let young = arrayObjects.filter(element=>element.Age <50);
+console.log(young);
