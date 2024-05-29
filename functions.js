@@ -101,7 +101,7 @@ newObj4 = {
     arrayObjects.push(newObj4);
 console.log(arrayObjects);
 
-//sort by age
+//Part 2: sort by age
 arrayObjects.sort((a, b) => a.Age -b.Age);
 console.log(arrayObjects);
 
@@ -122,3 +122,12 @@ jobArray = youngArray.map(function (obj) {
 console.log(jobArray);
 }
 keySwitch();
+
+//use the reduce methode to calulate the sum of the ages, calculate the average.
+
+let initialValue =0;
+let totalAge = jobArray.reduce((accumulator, currentValue) => accumulator +currentValue.Age, initialValue,);
+console.log('Total age is: '+totalAge);
+console.log('Average age is: '+(totalAge/jobArray.length))
+
+//Part 3:
