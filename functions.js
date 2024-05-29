@@ -131,3 +131,21 @@ console.log('Total age is: '+totalAge);
 console.log('Average age is: '+(totalAge/jobArray.length))
 
 //Part 3:
+//take an object and increment its age field with a function
+
+function oneMoreYear(arr) {
+    arr.map(function(obj) {
+        obj.Age =obj.Age +1;
+        return obj;
+    });
+console.log(arr)
+}
+oneMoreYear(jobArray);
+
+//make a copy of an object, make a copy then increment the age field by one.
+
+let jobArrayCopy = JSON.parse(JSON.stringify(jobArray));
+//increment the new array by one, I'm using the function I already wrote
+oneMoreYear(jobArrayCopy);
+console.log('below is the original array before copy and age increment')
+console.log(jobArray);
